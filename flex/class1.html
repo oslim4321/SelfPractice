@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #ccc;
+        }
+        .wrapper{
+            margin: 0 auto;
+            max-width: 1300px;
+        }
+        .box{
+            height: 90px;
+            /* min-width: 320px; */
+            /* flex-grow: 1; */
+            /* flex-basis: 320px; */
+            /* flex: 1 4 320px;  */
+                 /* flexGrow flexShrink flexBasic */
+            /* flex: 1; */
+        }
+        .one{
+            background-color: red;
+            flex: 1;
+        }
+        .two{
+            background-color: blue;
+            flex: 2;
+        }
+        .three{
+            background-color: purple;
+            flex: 3;
+
+        }
+         .flex-container{
+            display: flex;
+            background-color: white;
+           /* gap: 10px; */
+            /* flex-wrap: wrap; */
+        }
+     
+    </style>
+</head>
+<body>
+   <div class="wrapper">
+    <div class="flex-container">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+    </div>
+   </div>
+</body>
+</html>

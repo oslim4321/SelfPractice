@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griding</title>
+</head>
+<style>
+  .wrapper{
+    background-color: yellow;
+  }
+    .wrapper div{
+        background-color: red;
+        padding: 30px;
+    }
+    .wrapper div:nth-child(even){
+        background-color: aqua;
+  }
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows:repeat(3, minmax(100px, auto)); */
+        /* grid-auto-rows: 200px minmax(auto); */
+        grid-gap: 20px;
+        max-width: 960px;
+        margin: 0 auto;
+  }
+</style>
+<body>
+    
+
+    <div class="wrapper">
+        <div></div>
+        <div></div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis natus expedita corporis ullam magnam nostrum error magni eum obcaecati perspiciatis nihil, delectus ipsam adipisci, voluptas aspernatur deserunt debitis in. Doloribus Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quas, maiores saepe temporibus ipsam numquam dolores! Modi deserunt sunt laborum..</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

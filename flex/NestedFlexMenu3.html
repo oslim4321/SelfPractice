@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+        background-color: #eee;
+    }
+    .wrapper{
+        width: 100%;
+        max-width: 960px;
+        /* width: 960px; */
+        margin: 0 auto;
+    }
+    nav{
+        background-color: #333;
+    }
+    nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    nav li a{
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+        transition: all 0.6s ease;
+        text-align: center;
+    }
+    nav li a:hover{
+        background-color: #555;
+    }
+    nav ul.social{
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+
+    @media(min-width: 789px) {
+         nav ul{
+            display: flex;
+            padding: 10px 0;
+            /* justify-content: center; */
+        } 
+        nav li{
+            flex: 1 1 0;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Store</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+            <ul class="social">
+                <li><a href="" class="fb">facebook</a></li>
+                <li><a href="" class="tw">Twitter</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

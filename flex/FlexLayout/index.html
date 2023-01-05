@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    
+
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Store</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <span>layout:</span> <a id="stack">stack</a> <a id="grid">grid</a>
+        </div>
+        <section id="blocks">
+            
+            <article>
+                <h2>I pity The Fool...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum sed in nostrum illum quam omnis incidunt eaque animi laborum vitae doloremque accusantium unde sunt, quisquam error exercitationem blanditiis ullam debitis? Et illo, quidem error culpa iusto numquam, sint sed soluta quisquam delectus ratione officia qui magnam accusamus repellat ad.</p>
+            </article>
+            <article>
+                <h2>Get To the Chopper...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum sed in nostrum illum quam omnis incidunt eaque animi laborum vitae doloremque accusantium unde sunt, quisquam error exercitationem blanditiis ullam debitis? Et illo, quidem error culpa iusto numquam, sint sed soluta quisquam delectus ratione officia qui magnam accusamus repellat ad.</p>
+            </article>
+            <article>
+                <h2>What's a horse doind in a spaceShip...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum sed in nostrum illum quam omnis incidunt eaque animi laborum vitae doloremque accusantium unde sunt, quisquam error exercitationem blanditiis ullam debitis? Et illo, quidem error culpa iusto numquam, sint sed soluta quisquam delectus ratione officia qui magnam accusamus repellat ad.</p>
+            </article>
+            <article>
+                <h2>I pity The Fool...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum sed in nostrum illum quam omnis incidunt eaque animi laborum vitae doloremque accusantium unde sunt, quisquam error exercitationem blanditiis ullam debitis? Et illo, quidem error culpa iusto numquam, sint sed soluta quisquam delectus ratione officia qui magnam accusamus repellat ad.</p>
+            </article>
+            <article>
+                <h2>Get To the Chopper...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum sed in nostrum illum quam omnis incidunt eaque animi laborum vitae doloremque accusantium unde sunt, quisquam error exercitationem blanditiis ullam debitis? Et illo, quidem error culpa iusto numquam, sint sed soluta quisquam delectus ratione officia qui magnam accusamus repellat ad.</p>
+            </article>
+            <article>
+                <h2>What's a horse doind in a spaceShip...</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit rerum sed in nostrum illum quam omnis incidunt eaque animi laborum vitae doloremque accusantium unde sunt, quisquam error exercitationem blanditiis ullam debitis? Et illo, quidem error culpa iusto numquam, sint sed soluta quisquam delectus ratione officia qui magnam accusamus repellat ad.</p>
+            </article>
+        </section>
+    </div>
+    
+</body>
+
+<script>
+    article = document.querySelectorAll('article')
+    stack.addEventListener('click', ()=>{
+        article.forEach(element => {
+            element.classList.add('stack')
+        });
+    })
+    grid.addEventListener('click', ()=>{
+        article.forEach(element => {
+            element.classList.remove('stack')
+        });
+    })
+</script>
+</html>

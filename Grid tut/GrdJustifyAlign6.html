@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustifyGrid</title>
+</head>
+<body>
+    <style>
+  
+        #wrapper div{
+            background-color: gray;
+            padding: 30px;
+        }
+        #wrapper div:nth-child(even){
+            background-color: aqua;
+      }
+      #wrapper {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: minmax(150px);
+          grid-gap: 10px;
+          max-width: 950px;
+          margin: 0 auto;
+          
+          /* justify-items: end; */
+      }
+     .one{
+        justify-self: end;
+        align-self: end;
+     }
+     .two{
+        align-self: center;
+        justify-self: center;
+     }
+     .three{
+        align-self: start;
+        justify-self: start;
+     }
+  
+    </style>
+    <body>
+        
+    
+        <div id="wrapper">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,969 @@
+<html lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>User Home - MoneyEasily</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width,initial-scale=0.9,maximum-scale=0.9,viewport-fit=cover">
+    
+        <title>MoneyEasily - Get Paid to Complete Task and Make Money Online</title>
+        <meta name="description" content="Millions of people trust MoneyEasily who play games, complete tasks, share their opinions in exchange for rewards. Be social and make money online with MoneyEasily.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="/">
+        <meta property="og:title" content="MoneyEasily - Play With Friends and Get Paid">
+        <meta property="og:description" content="Millions of people trust MoneyEasily who play games, complete tasks, share their opinions in exchange for rewards. Be social and make money online with MoneyEasily.">
+        <meta property="og:image" content="assets/social_img.png">
+    
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="/">
+        <meta property="twitter:title" content="MoneyEasily - Play With Friends and Get Paid">
+        <meta property="twitter:description" content="Millions of people trust MoneyEasily who play games, complete tasks, share their opinions in exchange for rewards. Be social and make money online with MoneyEasily.">
+        <meta property="twitter:image" content="assets/social_img.png">
+    
+    
+        <link rel="stylesheet" type="text/css" href="./assets/bootstrap.css?">
+        <link rel="stylesheet" type="text/css" href="./assets/style-m.css?xxxcx">
+        <link href="./assets/css2" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./assets/fontawesome-all.min.css?">    
+        <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/icon-512x512.png">
+        <link rel="stylesheet" href="./assets/all.min.css?" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="assets/sweetalert2.min.css">
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://hm.baidu.com/hm.js?a711c146eb2a9ed4508f24c2f56c85b5"></script><script src="assets/sweetalert2.min.js"></script>
+        
+        <script>
+          var jumpDomain = "moneyeasily-pny.top";
+          function rget_Cookie(name) 
+          { 
+              var arr, reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+              if(arr=document.cookie.match(reg))
+              {
+                    return unescape(arr[2]); 
+              }
+              else 
+              {
+                  return ""; 
+              }
+          }
+      
+          //设置cookie值
+          function rset_Cookie(name,value) 
+          { 
+              var hour = 3000; 
+              var exp = new Date(); 
+              exp.setTime(exp.getTime() + hour*60*60*1000); 
+              document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+";path=/"; 
+          }
+    
+          //设置cookie值
+          function rset_short_Cookie(name,value) 
+          {  
+              var hour = 3000; 
+              var exp = new Date(); 
+              exp.setTime(exp.getTime() + 10*1000); 
+              document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+";path=/"; 
+          }
+        
+    
+        </script> 
+    </head>
+<body>
+    <body class="theme-light"><div class="menu-hider" id="body-prediv"></div>
+    
+
+    
+        <div id="preloader" class="preloader-hide">
+            <div class="spinner-border color-green-dark" style="border-width: 5px;" role="status"></div>
+    
+        </div>
+        
+        <div id="page" data-swup="0" class="device-is-ios device-is-android">
+    
+        <div id="footer-bar" class="footer-bar-6" style="transform: translateX(0px);">
+                <a href="dashboard.php" class=" active-nav "><i class="fa-solid fa-house"></i><span class="fw-bolder">Home</span><em></em><em></em></a>
+                <a href="referrals.php" class=""><i class="fa-solid fa-comments-dollar"></i><span class="fw-bolder">Invites</span></a>
+                <a href="offercenter.php" class="circle-nav "><i class="fa-solid fa-sack-dollar"></i><h6 class="font-14 font-800 mb-0">Task Center</h6><strong><u></u></strong><strong><u></u></strong></a>
+                <a href="videolist.php" class=""><i class="fa-solid fa-hashtag"></i><span class="fw-bolder">Videos</span></a>
+                <a href="cashout.php" class=""><i class="fa-solid fa-money-bill-transfer"></i><span class="fw-bolder">Cash Out</span></a>
+            </div>
+    <!-- <script>
+            function numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            function showToast() {
+                $.get('api.php?act=fetch', function(d) {
+                    if(d.success === true) {
+                        $.notify({
+                            icon: 'alert-icon ni ni-bell-55',
+                            title: 'New Payment Sent',
+                            message: "<strong>$" + numberWithCommas(toast_amount()) + "</strong> just got sent to <strong>" + d.toast.name + " via " + d.toast.method + "</strong>.",
+                        },
+                        {
+                            newest_on_top: false,
+                            offset: 20,
+                            spacing: 10,
+                            element: 'body',
+                            showProgressbar: true,
+                            animate: {
+                                enter: 'animated fadeInDown',
+                                exit: 'animated fadeOutUp'
+                            },
+                            type: "success",
+                            placement: {
+                                from: "bottom",
+                                align: "right"
+                            },
+                            icon_type: 'class',
+                            allow_dismiss: true,
+                            delay: randomIntFromInterval(5, 8)*1000,
+                            template: '<div data-notify="container" class="alert alert-dismissible alert-success alert-notify animated fadeInDown" role="alert" data-notify-position="top-center" style="display: inline-block;">' +
+                                '<span class="alert-icon fas fa-money-bill-wave" data-notify="icon"></span> ' +
+                                '<div class="alert-text" <="" div=""> ' +
+                                '<span class="alert-title" data-notify="title"> {1}</span>' +
+                                ' <span data-notify="message">{2}</span>' +
+                                '</div>' +
+                                '<button type="button" class="close" data-notify="dismiss" aria-label="Close" style="position: absolute; right: 10px; top: 5px; z-index: 1082;">' +
+                                '<span aria-hidden="true">×</span></button></div>'
+                        });
+                    }
+                });
+            }
+            function doToast(secs) {
+                setInterval(function(){ $.notifyClose();showToast(); }, secs);
+            }
+            function toast_seconds() {
+                return (Math.floor(Math.random() * (+30 - +15) + +15))*1000;
+            }
+            function toast_amount() {
+                return Math.floor(Math.random() * (+3000 - +600) + +600).toFixed(0);
+            }
+            function randomIntFromInterval(min, max) { // min and max included 
+              return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+    
+            doToast(randomIntFromInterval(1, 2)*60*1000);
+    </script>
+    <script src="./assets/axios.min.js"></script>
+    <script src="./assets/fetch.js"></script> -->
+    <div id="vwidget" class="vwidget-slide-in">
+        <h5 class="vwidget__name" style="line-height: 15px;">@PencariCuan</h5>
+        <p class="vwidget__action fs-12">MoneyEasily just paid $423.61 bonus to his Venmo account</p>
+        <div class="vwidget__whenwrapper">
+          <p class="vwidget__when fs-12">31 seconds ago</p>
+          <p class="vwidget__verifiedby fs-12" style="margin-bottom:0px;padding-bottom:0px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="vwidget__verifiedtick" width="18px" height="18px">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+           
+          </p>
+        </div>
+      </div>
+    <link rel="stylesheet" href="./assets/fetch.css?cc">
+        <script src="./assets/axios.min.js"></script>
+        <script src="./assets/fetch.js?xx"></script>   
+        <div class="page-title page-title-fixed" style="opacity: 1;">
+            <div>
+                <h1 class="font-16 color-highlight mb-n3">Welcome Back</h1>
+                <h1 class="font-19">@Oslim123</h1>
+            </div>
+            <!-- <a href="dashboard.php" class="page-title-icon shadow-xl bg-green-dark mt-2 color-theme" data-menu="menu-share-thumbs"><i class="fa-solid fa-share-from-square text-white fa-lg"></i></a> -->
+    <span class="page-title-icon shadow-xl bg-green-dark mt-2 color-theme" data-menu="menu-main"><i class="fa-solid fa-bars text-white fa-lg"></i></span>    </div>
+    <div class="header header-fixed header-logo-center header-auto-show bg-green-dark mb-4 shadow-l" style="transform: translateX(0px);">
+                <span class="header-title color-white">User Home</span>
+                <!-- <span data-back-button="" class="header-icon header-icon-1"><i class="fas fa-chevron-left color-white fa-lg"></i></span> -->
+                <span data-menu="menu-main" class="header-icon header-icon-4"><i class="fa-solid fa-bars-staggered color-white fa-lg"></i></span>
+                <!-- <span class="header-icon header-icon-3"><i class="fas color-white fa-share-alt fa-lg" data-menu="menu-share-thumbs"></i></span> -->
+            </div>    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-235924459-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-235924459-5');
+    </script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a711c146eb2a9ed4508f24c2f56c85b5";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <div id="share_title" style="display:none">MoneyEasily- Helping You Make Money Easily</div>
+    
+       <!--<div id='share_word' style="display:none"></div> -->
+    
+    <div id="share_word" style="display:none">MoneyEasily is the #1 marketing network. With over $14 million paid to 300k members, MoneyEasily lets regular users make money with social media and friends!</div>
+    
+    
+    
+    
+    
+    <div id="menu-main" class="menu menu-box-left rounded-0" data-menu-width="280" data-menu-active="nav-pages" style="display: block; width: 280px;">
+            <div class="card rounded-0 bg-6 mb-2" data-card-height="120" style="height: 120px;">
+                <div class="card-bottom">
+                    <div class="d-flex flex-row bd-highlight justify-content-between align-items-center">
+                      <div class="bd-highlight">
+                          <h1 class="color-white ps-3 mb-n1 font-28">MoneyEasily</h1>
+                      </div>
+                      <div class="bd-highlight">
+                          <a href="dashboard.php#" class="close-menu btn btn-xxs rounded-s text-uppercase font-700 shadow-s gradient-red me-2"><i class="fa fa-times color-white"></i></a>
+                      </div>
+                    </div>
+                    <p class="mb-2 ps-3 font-12 color-white opacity-80">An Exclusive Research Community where you get paid for using Social Media.</p>
+                </div>
+                <div class="card-overlay bg-black opacity-50"></div>
+            </div>
+            <div class="list-group list-custom-small list-menu">
+                <a href="dashboard.php">
+                    <i class="fa fa-home bg-teal-dark color-white"></i>
+                    <span>Home</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                <a href="referrals.php">
+                    <i class="fa-solid fa-comments-dollar gradient-blue color-white"></i>
+                    <span>Invite and Earn</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+            <h6 class="menu-divider mt-3">Tasks and Socials</h6>
+            <div class="list-group list-custom-small list-menu">
+                <a id="nav-pages" href="offercenter.php">
+                    <i class="fa-solid fa-sack-dollar bg-green-dark color-white scale-box"></i>
+                    <span>Task Center</span>
+                    <span class="badge font-10 bg-green-dark color-white"><strong>Earn Big $$$</strong></span>
+                </a>
+                <a id="nav-pages" href="videolist.php">
+                    <i class="fa-solid fa-hashtag gradient-brown color-white"></i>
+                    <span>Videos</span>
+                    <span class="badge font-10 gradient-blue color-white">Watch and Earn <strong>$$$</strong></span>
+                </a>
+                <a id="nav-pages" href="milestones.php">
+                    <i class="fa-solid fa-bullseye gradient-dark color-white"></i>
+                    <span>Daily Milestones</span>
+                    <span class="badge font-10 gradient-dark color-white">Extra Bonus</span>
+                </a>
+            </div>
+            <h6 class="menu-divider mt-4">Account and Cash Outs</h6>
+            <div class="list-group list-custom-small list-menu">
+                <a href="cashout.php">
+                    <i class="fa-solid fa-money-bill-transfer gradient-magenta color-white"></i>
+                    <span>Cash Out</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                <a href="cashoutshistory.php">
+                    <i class="fa-solid fa-building-columns gradient-yellow color-white"></i>
+                    <span>View Cash Outs</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                <a href="faq.php">
+                    <i class="fa-brands fa-hire-a-helper gradient-teal color-white"></i>
+                    <span>Help</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                <a href="language.php" style="padding-left:0.5rem">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 24h-2.784l-1.07-3h-4.875l-1.077 3h-2.697l4.941-13h2.604l4.958 13zm-4.573-5.069l-1.705-4.903-1.712 4.903h3.417zm-9.252-12.804c.126-.486.201-.852.271-1.212l-2.199-.428c-.036.185-.102.533-.22 1-.742-.109-1.532-.122-2.332-.041.019-.537.052-1.063.098-1.569h2.456v-2.083h-2.161c.106-.531.198-.849.288-1.149l-2.147-.645c-.158.526-.29 1.042-.422 1.794h-2.451v2.083h2.184c-.058.673-.093 1.371-.103 2.077-2.413.886-3.437 2.575-3.437 4.107 0 1.809 1.427 3.399 3.684 3.194 2.802-.255 4.673-2.371 5.77-4.974 1.134.654 1.608 1.753 1.181 2.771-.396.941-1.561 1.838-3.785 1.792v2.242c2.469.038 4.898-.899 5.85-3.166.93-2.214-.132-4.635-2.525-5.793zm-2.892 1.531c-.349.774-.809 1.544-1.395 2.15-.09-.646-.151-1.353-.184-2.108.533-.07 1.072-.083 1.579-.042zm-3.788.724c.062.947.169 1.818.317 2.596-1.996.365-2.076-1.603-.317-2.596zm11.236-1.745l-2.075-5.533 5.414-1.104-.976 1.868c2.999 2.418 4.116 5.645 4.532 8.132-1.736-2.913-3.826-4.478-5.885-5.321l-1.01 1.958zm-7.895 10.781l1.985 5.566-5.43 1.016 1.006-1.852c-2.96-2.465-4.021-5.654-4.397-8.148 1.689 2.94 3.749 4.483 5.794 5.36l1.042-1.942zm10.795-6.029"></path></svg>
+                    <span>Language</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+    
+            </div>
+        <h6 class="font-12 p-4">MoneyEasily © 2022 <br> Helping People Make Money Online <i class="fa fa-heart color-red-dark"></i></h6>
+    </div>  
+            
+            
+            
+        <div class="page-title-clear"></div>
+            
+        <div class="page-content" style="transform: translateX(0px);">
+            <div class="splide single-slider slider-no-arrows splide--loop splide--ltr splide--draggable is-active" id="single-slider-3" style="visibility: visible;">
+                <div class="splide__arrows"><button class="splide__arrow splide__arrow--prev" type="button" aria-controls="single-slider-3-track" aria-label="Go to last slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></button><button class="splide__arrow splide__arrow--next" type="button" aria-controls="single-slider-3-track" aria-label="Next slide"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></button></div><div class="splide__track" id="single-slider-3-track">
+                    <div class="splide__list" id="single-slider-3-list" style="transform: translateX(-2496px);">
+                            <div class="splide__slide splide__slide--clone" aria-hidden="true" tabindex="-1" style="width: 1248px;">
+                                <div class="card card-style bg-11 mt-3" style="height: 12rem;">
+                                    <div class="card-bottom ps-3 pb-3">
+                                        <h1 class="font-17 color-white mb-n3">Hi Adewale,</h1>
+                                        <h4 class="font-14 fw-normal color-white mb-4 opacity-80">Your Statistics <i class="fa-solid fa-caret-down"></i></h4>
+                                        <div class="d-flex">
+                                            <div class="pe-3 text-start">
+                                                <h5 class="color-white">$25.00<br><font style="font-size:0.9rem;">(₦ 11216.87)</font></h5>
+                                                <h6 class="fw-normal color-white opacity-60">My Balance</h6>
+                                            </div>
+                                            <div class="pe-3 text-start">
+                                                <h5 class="color-red-light fw-bold">-$0</h5>
+                                                <h6 class="fw-normal color-white opacity-60" onclick="location.href='cashout.php'">Cash Out</h6>
+                                            </div>
+                                            <div class="ms-auto text-end pe-3">
+                                                <h5 class="color-white">$25.00</h5>
+                                                <h6 class="fw-normal color-white opacity-80">Total Earnings</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-overlay bg-black opacity-60"></div>
+                                </div>
+                            </div><div class="splide__slide splide__slide--clone" style="width: 1248px;">
+                                <div class="card card-style bg-34" data-card-height="210" style="height: 210px;">
+                                    <div class="card-top">
+                                        <div class="d-flex flex-row bd-highlight align-items-center justify-content-between m-2">
+                                            <div class="bd-highlight">
+                                                <h1 class="color-white text-start font-18 mb-0 pb-0"></h1>
+                                            </div>
+                                            <div class="bd-highlight">
+                                                <a href="/" class="btn btn-xxs rounded-s text-uppercase font-700 shadow-s bg-green-light">+ $15</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-center text-center mt-3" onclick="location.href='milestones.php'">
+                                        <h1 class="color-white font-24 mb-0 pb-0">Daily Milestones</h1>
+                                        <p class="color-white boxed-text-l opacity-80 mb-2">
+                                        Complete target milestone daily and claim extra bonus earnings for reaching milestones.                                    </p>
+    
+                                        <button id="claimDailyBtnId" class="btn btn-s rounded-s mb-3 font-600 bg-green-dark">Claim Daily Login Bonus</button>
+                                        
+                                    </div>
+                                    <div class="card-overlay bg-dark opacity-90"></div>
+                                </div>
+                            </div><div class="splide__slide splide__slide--clone is-active is-visible" aria-hidden="false" tabindex="0" style="width: 1248px;" id="single-slider-3-slide01">
+                                <div class="card card-style bg-11 mt-3" style="height: 12rem;">
+                                    <div class="card-bottom ps-3 pb-3">
+                                        <h1 class="font-17 color-white mb-n3">Hi Adewale,</h1>
+                                        <h4 class="font-14 fw-normal color-white mb-4 opacity-80">Your Statistics <i class="fa-solid fa-caret-down"></i></h4>
+                                        <div class="d-flex">
+                                            <div class="pe-3 text-start">
+                                                <h5 class="color-white">$25.00<br><font style="font-size:0.9rem;">(₦ 11216.87)</font></h5>
+                                                <h6 class="fw-normal color-white opacity-60">My Balance</h6>
+                                            </div>
+                                            <div class="pe-3 text-start">
+                                                <h5 class="color-red-light fw-bold">-$0</h5>
+                                                <h6 class="fw-normal color-white opacity-60" onclick="location.href='cashout.php'">Cash Out</h6>
+                                            </div>
+                                            <div class="ms-auto text-end pe-3">
+                                                <h5 class="color-white">$25.00</h5>
+                                                <h6 class="fw-normal color-white opacity-80">Total Earnings</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-overlay bg-black opacity-60"></div>
+                                </div>
+                            </div>
+                            <div class="splide__slide splide__slide--clone" style="width: 1248px;" id="single-slider-3-slide02" aria-hidden="true" tabindex="-1">
+                                <div class="card card-style bg-34" data-card-height="210" style="height: 210px;">
+                                    <div class="card-top">
+                                        <div class="d-flex flex-row bd-highlight align-items-center justify-content-between m-2">
+                                            <div class="bd-highlight">
+                                                <h1 class="color-white text-start font-18 mb-0 pb-0"></h1>
+                                            </div>
+                                            <div class="bd-highlight">
+                                                <a href="/" class="btn btn-xxs rounded-s text-uppercase font-700 shadow-s bg-green-light">+ $15</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-center text-center mt-3" onclick="location.href='milestones.php'">
+                                        <h1 class="color-white font-24 mb-0 pb-0">Daily Milestones</h1>
+                                        <p class="color-white boxed-text-l opacity-80 mb-2">
+                                        Complete target milestone daily and claim extra bonus earnings for reaching milestones.                                    </p>
+    
+                                        <button id="claimDailyBtnId" class="btn btn-s rounded-s mb-3 font-600 bg-green-dark">Claim Daily Login Bonus</button>
+                                        
+                                    </div>
+                                    <div class="card-overlay bg-dark opacity-90"></div>
+                                </div>
+                            </div>
+                <div class="splide__slide splide__slide--clone" aria-hidden="true" tabindex="-1" style="width: 1248px;">
+                                <div class="card card-style bg-11 mt-3" style="height: 12rem;">
+                                    <div class="card-bottom ps-3 pb-3">
+                                        <h1 class="font-17 color-white mb-n3">Hi Adewale,</h1>
+                                        <h4 class="font-14 fw-normal color-white mb-4 opacity-80">Your Statistics <i class="fa-solid fa-caret-down"></i></h4>
+                                        <div class="d-flex">
+                                            <div class="pe-3 text-start">
+                                                <h5 class="color-white">$25.00<br><font style="font-size:0.9rem;">(₦ 11216.87)</font></h5>
+                                                <h6 class="fw-normal color-white opacity-60">My Balance</h6>
+                                            </div>
+                                            <div class="pe-3 text-start">
+                                                <h5 class="color-red-light fw-bold">-$0</h5>
+                                                <h6 class="fw-normal color-white opacity-60" onclick="location.href='cashout.php'">Cash Out</h6>
+                                            </div>
+                                            <div class="ms-auto text-end pe-3">
+                                                <h5 class="color-white">$25.00</h5>
+                                                <h6 class="fw-normal color-white opacity-80">Total Earnings</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-overlay bg-black opacity-60"></div>
+                                </div>
+                            </div><div class="splide__slide splide__slide--clone" style="width: 1248px;">
+                                <div class="card card-style bg-34" data-card-height="210" style="height: 210px;">
+                                    <div class="card-top">
+                                        <div class="d-flex flex-row bd-highlight align-items-center justify-content-between m-2">
+                                            <div class="bd-highlight">
+                                                <h1 class="color-white text-start font-18 mb-0 pb-0"></h1>
+                                            </div>
+                                            <div class="bd-highlight">
+                                                <a href="/" class="btn btn-xxs rounded-s text-uppercase font-700 shadow-s bg-green-light">+ $15</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-center text-center mt-3" onclick="location.href='milestones.php'">
+                                        <h1 class="color-white font-24 mb-0 pb-0">Daily Milestones</h1>
+                                        <p class="color-white boxed-text-l opacity-80 mb-2">
+                                        Complete target milestone daily and claim extra bonus earnings for reaching milestones.                                    </p>
+    
+                                        <button id="claimDailyBtnId" class="btn btn-s rounded-s mb-3 font-600 bg-green-dark">Claim Daily Login Bonus</button>
+                                        
+                                    </div>
+                                    <div class="card-overlay bg-dark opacity-90"></div>
+                                </div>
+                            </div></div>
+            <ul class="splide__pagination"><li><button class="splide__pagination__page is-active" type="button" aria-controls="single-slider-3-slide01" aria-label="Go to slide 1" aria-current="true"></button></li><li><button class="splide__pagination__page" type="button" aria-controls="single-slider-3-slide02" aria-label="Go to slide 2"></button></li></ul></div>
+            
+            
+            
+            <div class="card card-style">
+                <div class="content">
+                    <h2 class="font-17">🔥 Share and Earn <a href="faq.php" target="_blank" class="float-end color-highlight">Need Help?</a></h2>
+                    <div class="divider mb-3"></div>
+    
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control font-600" value="https://moneyeasily-pny.top/81455187236407" id="inviteurl">
+                      <button class="btn btn-xxs fw-bold bg-green-dark" type="button" onclick="doselect('inviteurl');" id="copylink_button">COPY SHARE LINK</button>
+                    </div>
+    
+                    <div>
+                        <h5 class="font-14 font-600 pt-1 mb-n1"><b>1.</b> Copy and share with your friends and family.</h5>
+                    </div>
+                    <div>
+                        <h5 class="font-16 font-600 pt-1 mb-n1" style="color:#e9165a;"><b>2.As long as the friends you invite make money on our platform, you can get a 10% rake as a reward.</b></h5>
+                    </div>
+                    <div>
+                        <h5 class="font-14 font-600 pt-1 mb-n1"><b>3.</b> Use our Sharing Guide to help you invite to more people.</h5>
+                    </div>
+                    <div>
+                        <h5 class="font-14 font-600 pt-1 mb-n1"><b>4.</b> When someone clicks your link, you earn $2.</h5>
+                    </div>
+                    <div>
+                        <h5 class="font-14 font-600 pt-1 mb-n1"><b>5.</b>When they sign up as a user of our platform, you will get a $20 reward.</h5>
+                    </div>
+                    
+                    
+                                                          <iframe style="display:none;" src="//moneyeasily-aq.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-bt.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-un.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-yp.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-cfo.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-msb.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-chx.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-elt.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-fru.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-gvc.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-ibw.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-jvd.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-qlu.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-xmr.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-ysg.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-zbr.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-gvl.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-jeq.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-nag.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-oex.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                                            <iframe style="display:none;" src="//moneyeasily-pny.top/lc.php?uuu=81455187236&amp;ddd=bW9uZXllYXNpbHkta2VvLnRvcA=="></iframe>
+                                                     
+                    <div class="card card-style m-4 bg-gray-light">
+                        <div class="content">
+                            <div class="text-center" style="line-height:4rem;">
+                                <font style="width:3rem;margin: 0 0.2rem 0 0;" onclick="share_wa()"><img style="width:3rem;vertical-align: middle;border-style: none;" src="./assets/Answer_contact_1.png" alt=""></font>                
+                                <font style="width:3rem;margin: 0 0.2rem 0.1rem 0.2rem;" onclick="share_twitter()"><img style="width:3rem;vertical-align: middle;border-style: none;" src="./assets/Answer_contact_4.png" alt=""></font>
+                                <font style="margin: 0 0.2rem 0.1rem 0.2rem;" onclick="share_tg()"><img style="width:3rem;vertical-align: middle;border-style: none;" src="./assets/Answer_contact_5.png" alt=""></font>
+                                <font style="margin: 0 0rem 0.1rem 0.2rem;" onclick="share_line()"><img style="width:3rem;vertical-align: middle;border-style: none;" src="./assets/Answer_contact_6.png" alt=""></font>
+                                <font style="margin: 0 0.2rem 0.1rem 0.2rem;" onclick="share_fb()"><img style="width:3rem;vertical-align: middle;border-style: none;" src="./assets/Answer_contact_3.png" alt=""></font>
+                                <font style="margin: 0 0.2rem 0.1rem 0.2rem;" onclick="share_ms()"><img style="width:3rem;vertical-align: middle;border-style: none;" src="./assets/Answer_contact_2.png" alt=""></font>
+                                <button id="optionshare" style="margin: 0 0.2rem 0.1rem 0.2rem;width:3rem;height:3rem;line-height: 3rem;vertical-align: middle;border-style: none;" class="icon icon-xs rounded-sm mr-1 shadow-l bg-red-dark"><i class="fa fa-share-alt"></i></button>
+                                <button style="border-radius:10px;margin: 0 0.2rem 0.1rem 0.2rem;width:3rem;height:3rem;line-height: 3rem;vertical-align: middle;border-style: none;background:#F12A2D;" onclick="share_pinterest()"><svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="ionicon s-ion-icon" width="30" height="30" viewBox="0 0 512 512"><title>Logo Pinterest</title><path d="M256.05 32c-123.7 0-224 100.3-224 224 0 91.7 55.2 170.5 134.1 205.2-.6-15.6-.1-34.4 3.9-51.4 4.3-18.2 28.8-122.1 28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2 19.2-58 43.2-58 20.4 0 30.2 15.3 30.2 33.6 0 20.5-13.1 51.1-19.8 79.5-5.6 23.8 11.9 43.1 35.4 43.1 42.4 0 71-54.5 71-119.1 0-49.1-33.1-85.8-93.2-85.8-67.9 0-110.3 50.7-110.3 107.3 0 19.5 5.8 33.3 14.8 43.9 4.1 4.9 4.7 6.9 3.2 12.5-1.1 4.1-3.5 14-4.6 18-1.5 5.7-6.1 7.7-11.2 5.6-31.3-12.8-45.9-47-45.9-85.6 0-63.6 53.7-139.9 160.1-139.9 85.5 0 141.8 61.9 141.8 128.3 0 87.9-48.9 153.5-120.9 153.5-24.2 0-46.9-13.1-54.7-27.9 0 0-13 51.6-15.8 61.6-4.7 17.3-14 34.5-22.5 48a225.13 225.13 0 0063.5 9.2c123.7 0 224-100.3 224-224S379.75 32 256.05 32z"></path></svg></button>
+                                <button style="border-radius:10px;margin: 0 0.2rem 0.1rem 0.2rem;width:3rem;height:3rem;line-height: 3rem;vertical-align: middle;border-style: none;background:#ff4500;" onclick="share_reddit()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30" height="30" class="ionicon s-ion-icon" viewBox="0 0 512 512"><title>Logo Reddit</title><path d="M324 256a36 36 0 1036 36 36 36 0 00-36-36z"></path><circle cx="188" cy="292" r="36" transform="rotate(-22.5 187.997 291.992)"></circle><path d="M496 253.77c0-31.19-25.14-56.56-56-56.56a55.72 55.72 0 00-35.61 12.86c-35-23.77-80.78-38.32-129.65-41.27l22-79 66.41 13.2c1.9 26.48 24 47.49 50.65 47.49 28 0 50.78-23 50.78-51.21S441 48 413 48c-19.53 0-36.31 11.19-44.85 28.77l-90-17.89-31.1 109.52-4.63.13c-50.63 2.21-98.34 16.93-134.77 41.53A55.38 55.38 0 0072 197.21c-30.89 0-56 25.37-56 56.56a56.43 56.43 0 0028.11 49.06 98.65 98.65 0 00-.89 13.34c.11 39.74 22.49 77 63 105C146.36 448.77 199.51 464 256 464s109.76-15.23 149.83-42.89c40.53-28 62.85-65.27 62.85-105.06a109.32 109.32 0 00-.84-13.3A56.32 56.32 0 00496 253.77zM414 75a24 24 0 11-24 24 24 24 0 0124-24zM42.72 253.77a29.6 29.6 0 0129.42-29.71 29 29 0 0113.62 3.43c-15.5 14.41-26.93 30.41-34.07 47.68a30.23 30.23 0 01-8.97-21.4zM390.82 399c-35.74 24.59-83.6 38.14-134.77 38.14S157 423.61 121.29 399c-33-22.79-51.24-52.26-51.24-83A78.5 78.5 0 0175 288.72c5.68-15.74 16.16-30.48 31.15-43.79a155.17 155.17 0 0114.76-11.53l.3-.21.24-.17c35.72-24.52 83.52-38 134.61-38s98.9 13.51 134.62 38l.23.17.34.25A156.57 156.57 0 01406 244.92c15 13.32 25.48 28.05 31.16 43.81a85.44 85.44 0 014.31 17.67 77.29 77.29 0 01.6 9.65c-.01 30.72-18.21 60.19-51.25 82.95zm69.6-123.92c-7.13-17.28-18.56-33.29-34.07-47.72A29.09 29.09 0 01440 224a29.59 29.59 0 0129.41 29.71 30.07 30.07 0 01-8.99 21.39z"></path><path d="M323.23 362.22c-.25.25-25.56 26.07-67.15 26.27-42-.2-66.28-25.23-67.31-26.27a4.14 4.14 0 00-5.83 0l-13.7 13.47a4.15 4.15 0 000 5.89c3.4 3.4 34.7 34.23 86.78 34.45 51.94-.22 83.38-31.05 86.78-34.45a4.16 4.16 0 000-5.9l-13.71-13.47a4.13 4.13 0 00-5.81 0z"></path></svg>
+                                </button>
+                                <button style="border-radius:10px;margin: 0 0.2rem 0.1rem 0.2rem;width:3rem;height:3rem;line-height: 3rem;vertical-align: middle;border-style: none;background:#34526f;" onclick="share_tumblr()">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30" height="30" class="ionicon s-ion-icon" viewBox="0 0 512 512"><title>Logo Tumblr</title><path d="M390 32H120c-49.19 0-88 38.81-88 88v270c0 49.19 38.81 90 88 90h270c49.19 0 90-40.81 90-90V120c0-49.19-40.81-88-90-88zm-54 364h-52c-42.51 0-72-23.68-72-76v-80h-36v-48c42.51-11 57.95-48.32 60-80h44v72h52v56h-52l-.39 70.51c0 21.87 11 29.43 28.62 29.43L336 340z"></path></svg>
+                                </button>
+                                <button style="border-radius:10px;margin: 0 0.2rem 0.1rem 0.2rem;width:3rem;height:3rem;line-height: 3rem;vertical-align: middle;border-style: none;background:#4C75A3;" onclick="share_vk()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" width="30" height="30" class="ionicon s-ion-icon" viewBox="0 0 512 512"><title>Logo Vk</title><path d="M484.7 132c3.56-11.28 0-19.48-15.75-19.48h-52.37c-13.21 0-19.31 7.18-22.87 14.86 0 0-26.94 65.6-64.56 108.13-12.2 12.3-17.79 16.4-24.4 16.4-3.56 0-8.14-4.1-8.14-15.37V131.47c0-13.32-4.06-19.47-15.25-19.47H199c-8.14 0-13.22 6.15-13.22 12.3 0 12.81 18.81 15.89 20.84 51.76V254c0 16.91-3 20-9.66 20-17.79 0-61-66.11-86.92-141.44C105 117.64 99.88 112 86.66 112H33.79C18.54 112 16 119.17 16 126.86c0 13.84 17.79 83.53 82.86 175.77 43.21 63 104.72 96.86 160.13 96.86 33.56 0 37.62-7.69 37.62-20.5v-47.66c0-15.37 3.05-17.93 13.73-17.93 7.62 0 21.35 4.09 52.36 34.33C398.28 383.6 404.38 400 424.21 400h52.36c15.25 0 22.37-7.69 18.3-22.55-4.57-14.86-21.86-36.38-44.23-62-12.2-14.34-30.5-30.23-36.09-37.92-7.62-10.25-5.59-14.35 0-23.57-.51 0 63.55-91.22 70.15-122" fill-rule="evenodd"></path></svg>
+                                </button>
+                                <button style="border-radius:10px;margin: 0 0.2rem 0.1rem 0.2rem;width:3rem;height:3rem;line-height: 3rem;vertical-align: middle;border-style: none;background:#1E74FB;" onclick="share_mail()">
+                                    <svg fill="#ffffff" width="25" height="25" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-0">
+                        <div class="col pe-2">
+                            <div class="card card-style rounded-m me-0 p-3 text-center mb-0">
+                                <h4 class="mb-0 fw-bold">$2</h4>
+                                <h6 class="">per Click</h6>
+                            </div>
+                        </div>
+                        <div class="col ps-2">
+                            <div class="card card-style rounded-m me-0 p-3 text-center mb-0">
+                                <h4 class="mb-0 fw-bold">$20</h4>
+                                <h6 class="">per Invite</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                                   var aa = true;
+                                                    function doselect(oname){
+                                                        if(aa){
+                                                            element=document.getElementById(oname);
+                                                            element.select();
+                                                            var successful = document.execCommand('copy');
+                                                            //aa =false;
+                                                            Swal.fire({
+                                                                icon: 'success',
+                                                                text: 'The invite link has been copied to the clipboard',
+                                                            })
+                                                        }
+                                                    
+                                                    }
+                                    function sharetime(flag){
+                                        _hmt.push(['_trackEvent','share_link', flag, "", ""]);
+                                    }
+    
+                                    function share_pinterest(){
+                                        sharetime('pin');
+                                        location.href="https://pinterest.com/pin/create/button/?url="+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=pi")+"&amp;media="+encodeURIComponent("https://"+jumpDomain+"/assets/social_img.jpg")+"&amp;description="+encodeURIComponent(document.getElementById('share_word').innerHTML);
+                                    }
+                                    function share_reddit(){
+                                        sharetime('red');
+                                        location.href="https://reddit.com/submit?url="+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=rd")+"&amp;title="+encodeURIComponent(document.getElementById('share_word').innerHTML);
+                                    }
+                                    function share_tumblr(){
+                                        sharetime('tb');
+                                        location.href="https://www.tumblr.com/widgets/share/tool?canonicalUrl="+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=tu")+"&amp;title="+encodeURIComponent(document.getElementById('share_word').innerHTML);
+                                    }
+                                    function share_vk(){
+                                        sharetime('vk');
+                                        location.href="https://vk.com/share.php?url="+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=wt")+"&amp;title="+encodeURIComponent(document.getElementById('share_word').innerHTML);
+                                    }
+                                    function share_mail(){
+                                        sharetime('mail');
+                                        location.href="mailto:?subject="+encodeURIComponent(document.getElementById('share_word').innerHTML)+" -> "+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=wt");
+                                    }
+                                    
+                                    function share_wa(){
+                                        sharetime('wa');
+                                        //gtag("event", "NG", {  'event_category' : 'share_whatsapp','event_label' : 'wt'});
+                                        location.href="whatsapp://send?text="+encodeURIComponent(document.getElementById('share_word').innerHTML)+" "+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=wt");
+                                    }
+                                    
+                                    function share_ms(){
+                                        sharetime('ms');
+                                        //gtag("event", "NG", {  'event_category' : 'share_messenger','event_label' : 'ms'});
+                                        location.href="fb-messenger://share/?link="+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=ms");
+                                    }
+                                    function share_tg(){
+                                        sharetime('tg');
+                                        //gtag("event", "NG", {  'event_category' : 'share_telegram','event_label' : 'tg'});
+                                        location.href="tg://msg?text="+encodeURIComponent(document.getElementById('share_word').innerHTML)+" "+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=tg");
+                                    }
+                                    function share_line(){
+                                        sharetime('li');
+                                        //gtag("event", "NG", {  'event_category' : 'share_line','event_label' : 'li'});
+                                        location.href="line://msg/text/"+encodeURIComponent(document.getElementById('share_word').innerHTML)+" "+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=li");
+                                    }
+                                    function share_twitter(){
+                                        sharetime('tw');
+                                        //gtag("event", "NG", {  'event_category' : 'share_twitter','event_label' : 'tw'});
+                                        location.href="https://twitter.com/intent/tweet/?text="+encodeURIComponent(document.getElementById('share_word').innerHTML)+"&url="+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=tw");
+                                    }
+                                    function share_fb(){
+                                        sharetime('fb');
+                                        //gtag("event", "NG", {  'event_category' : 'share_facebook','event_label' : 'fb'});
+                                        location.href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent("https://"+jumpDomain+"/81455187236407/?s=fb")+"&quote=";
+                                    }
+    
+                                </script>
+                </div>
+            </div>
+    
+            <div class="content mb-0 mt-3">
+                <div class="row mb-0">
+                    <div class="col-6 pe-1">
+                        <div class="card card-style mx-0 mb-2 p-3">
+                            <h6 class="font-14">Clicks</h6>
+                            <h3 class="color-green-dark mb-0">0</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 ps-1">
+                        <div class="card card-style mx-0 mb-2 p-3">
+                            <h6 class="font-14">People Invited</h6>
+                            <h3 class="color-yellow-dark mb-0">0</h3>
+                        </div>
+                    </div>
+                                    <div class="col-6 pe-1">
+                        <div class="card card-style mx-0 p-3">
+                            <h6 class="font-14">Task</h6>
+                            <h3 class="color-brown-dark mb-0">0</h3>
+                        </div>
+                    </div>
+                    <div class="col-6 ps-1">
+                        <div class="card card-style mx-0 p-3">
+                            <h6 class="font-14">Task Commission</h6>
+                            <h3 class="color-blue-dark mb-0">$0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+                    
+    
+            <a href="offercenter.php" class="card card-style bg-31" data-card-height="150" style="height: 150px;">
+                <div class="card-center">
+                    <div class="content">
+                        <div class="d-flex">
+                            <div>
+                            <h1 class="color-white font-27 mb-1"><i class="fa-solid fa-sack-dollar"></i> Task Center</h1>
+                            <p class="color-white opacity-80 mb-0">
+                            Complete easy Tasks from the Task Center and Earn $$$ Fast and Easy. 
+                            </p>
+                            </div>
+                            <div class="ms-auto align-self-center">
+                                <i class="fa-solid fa-circle-arrow-right fa-3x text-white ms-2"></i>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="card-overlay bg-black opacity-50"></div>
+            </a>
+    
+               <!--    <div class="card card-style bg-youtube-post" data-card-height="240" style="height: 240px;">
+                    <div class="card-top">
+                        <div class="d-flex flex-row bd-highlight align-items-center justify-content-between ms-2 me-2 mt-2">
+                          <div class="bd-highlight">
+                              <h1 class="color-white text-start font-18 mb-0 pb-0">Limited Time Reward</h1>
+                          </div>
+                          <div class="bd-highlight">
+                              <button class="btn btn-xxs rounded-s text-uppercase font-700 shadow-s bg-red-light">+ $5</button>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card-center text-center">
+                        <h1 class="color-white font-24 mb-0 pb-0">YouTube Bonus</h1>
+                        <p class="color-white boxed-text-l mb-2">
+                            Earn Extra $5 for Subscribing To www.googles.com YouTube Channel
+                        </p>
+                        <form action="referrals.php" method="POST" class="text-center">
+                            <input type="hidden" name="_token" value="qj3Y6gc8nDummCy9PNIO8PhJvzfawQrZDIfXg1WH">                        <input type="hidden" name="id" value="1">
+                            <input type="hidden" name="url" value="https://www.youtube.com/channel/UCu0yTHCE1231213bp6SRvw9w?sub_confirmation=1">
+                            <button onclick="submitSocialForm(this)" class="btn btn-s rounded-s mb-3 font-600 gradient-red">Claim Reward</button>
+                        </form>
+                        
+                    </div>
+                    <div class="card-bottom">
+                        <p class="color-white opacity-80 fw-bolder text-center mb-0">DO NOT Forget to Press the BELL ICON and Select <b>"ALL"</b> or you won't be credited $5 bonus.</p>
+                    </div>
+                    <div class="card-overlay bg-dark opacity-70"></div>
+                </div>
+                                  
+    
+        <div class="card card-style bg-green-light">
+                <div class="content">
+                    <p class="mb-n1 color-white opacity-80 font-600">CHECKLIST</p>
+                    <h3 class="color-white mb-0">Checklist To Your Cash Out</h3>
+                    <p class="color-white">
+                        It's easy to track the progress of your first cashout.
+                    </p>
+                </div>
+                <div class="card card-style">
+                            <div class="content">
+                                <h5 class="font-14 opacity-50">Progress Breakdown <a href="cashout.php" class="float-end color-highlight"><i class="fa-solid fa-arrow-right-long"></i></a></h5>
+                                <div class="divider mb-3"></div>
+    
+                                <div class="mb-4">
+                                    <h5>Clicks<span class="opacity-30 float-end">0%</span></h5>
+                                    <div class="progress" style="height:8px;">
+                                        <div class="progress-bar border-0 bg-green-dark text-start ps-2" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <h5>People Invited<span class="opacity-30 float-end">0%</span></h5>
+                                    <div class="progress" style="height:8px;">
+                                        <div class="progress-bar border-0 bg-yellow-dark text-start ps-2" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <h5>Task Completed<span class="opacity-30 float-end">0%</span></h5>
+                                    <div class="progress" style="height:8px;">
+                                        <div class="progress-bar border-0 bg-brown-dark text-start ps-2" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <h5>Task Commission<i data-menu="menu-success-1" class="fa-solid fa-circle-question ms-1 color-blue-dark"></i>
+                                    <span class="opacity-30 float-end">0%</span></h5>
+                                    <div class="progress" style="height:8px;">
+                                        <div class="progress-bar border-0 bg-blue-dark text-start ps-2" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>                   
+                            </div>
+                        </div>
+            </div>  -->
+    
+    
+    
+            <div class="card card-style bg-white-light ms-0 me-0 rounded-0">
+                <div class="content">
+                    <h1 class="color-dark mb-0">Earning $$$'s Can Be Fun!</h1>
+                    <p class="color-dark opacity-60">
+                    Earning Money  is simple and fun. Choose any option from below and start earning in minutes.                </p>
+                </div>
+                <a href="referrals.php" class="card card-style rounded-m p-3 mb-3">
+                    <span><img src="./assets/invitel.png" class="rounded-sm shadow-xl img-fluid" width="100"><i class="fa-solid fa-circle-arrow-right fa-2x float-end mt-2"></i></span>
+                    <h4 class="pt-3">Invite People <p class="float-end mb-0 font-14 color-green-light">Earn $22 Per Invite</p></h4>
+                    <p class="font-14 mb-0">Start by inviting your friends, family or your followers. You can send your Share Link via text message or share on Social Media. The best way is to DM your friends or family.</p>
+                </a>
+                <a href="offercenter.php" class="card card-style rounded-m p-3 mb-3">
+                    <span><img src="./assets/taskl.png" class="rounded-sm shadow-xl img-fluid" width="70"><i class="fa-solid fa-circle-arrow-right fa-2x float-end mt-2"></i></span>
+                    <h4 class="pt-3">Complete Tasks <p class="float-end mb-0 font-14 color-green-light">Earn $20+</p></h4>
+                    <p class="font-14 mb-0">Complete Fun and Easy Tasks from Task Center. Tasks are usually simple and easy to complete. <b>Earn upto $105 per Task.</b></p>
+                </a>
+                <a href="videolist.php" class="card card-style rounded-m p-3 mb-3">
+                    <span><img src="./assets/postl.jpg" class="rounded-sm shadow-xl img-fluid" width="100"><i class="fa-solid fa-circle-arrow-right fa-2x float-end mt-2"></i></span>
+                    <h4 class="pt-3">Watch Videos <p class="float-end mb-0 font-14 color-green-light">Earn $20+</p></h4>
+                    <p class="font-14 mb-0">Watch promotional videos and earn promotional fees</p>
+                </a>
+                <!-- <a href="referrals.php" class="card card-style rounded-m p-3 mb-3">
+                    <span><img src="./assets/socialkit.jpg" class="rounded-sm shadow-xl img-fluid" width="100"><i class="fa-solid fa-circle-arrow-right fa-2x float-end mt-2"></i></span>
+                    <h4 class="pt-3">Socials Kit <p class="float-end mb-0 font-14 color-green-light">The #1 Sharing Guide</p></h4>
+                    <p class="font-13 mb-0">Click below to try methods and recommendations on how to promote your link and get more referrals!</p>
+                    <p class="font-12 font-600 mb-0">Users who use the tips in the kit have <b data-v-9705da02="">10x</b> their referrals</p>
+                </a> -->
+                <a href="milestones.php" class="card card-style rounded-m p-3 mb-3">
+                    <span><img src="./assets/milestones.jpg" class="rounded-sm shadow-xl img-fluid" width="90"><i class="fa-solid fa-circle-arrow-right fa-2x float-end mt-2"></i></span>
+                    <h4 class="pt-3">Daily Milestones <p class="float-end mb-0 font-14 color-green-light">Earn Exta $$$ Daily</p></h4>
+                    <p class="font-14 mb-0">Complete target milestone daily and claim extra bonus earnings for reaching milestones.</p>
+                    <p class="font-14 font-600 mb-0">Milestones resets everyday so complete them daily to enjoy extra earnings.</p>
+                </a>
+            </div>
+        
+           
+        <ul class="splide__pagination"><li><button class="splide__pagination__page is-active" type="button" aria-controls="single-slider-3-slide01" aria-label="Go to slide 1" aria-current="true"></button></li><li><button class="splide__pagination__page" type="button" aria-controls="single-slider-3-slide02" aria-label="Go to slide 2"></button></li></ul></div>
+        
+        
+        
+        
+    
+           
+    
+        
+            <div id="menu-success-1" class="menu menu-box-modal rounded-m" data-menu-height="250" data-menu-width="350" style="display: block; width: 350px; height: 250px;">
+        <div class="menu-title">
+            <i class="fa-solid fa-circle-info scale-box float-start me-3 ms-3 fa-4x color-blue-light"></i>
+            <h4 class="mt-4 color-highlight">What is Task Commission?</h4>
+            <a href="/" class="close-menu"><i class="fa fa-times-circle"></i></a>
+        </div>
+        <div class="content mb-0 mt-0">
+            <p class="pe-3 mb-2">
+             <a href="offercenter.php">When your referrals/People Invited by you completes a Task from the Task Center</a>, you earn an additional 20% bonus on your referral earnings, which is known as Task Commission.        </p>
+            
+            <p class="mb-0"><b>Having trouble earning Task Commission?</b> <a href="offercenter.php">Checkout our Task Commission Guide, which will help you earn Task Commission 10x faster.</a></p>
+        </div>
+    </div> 	
+    
+        <div id="toast-2" class="toast toast-tiny toast-top bg-green-dark" data-bs-delay="2000"><i class="fa-solid fa-clipboard me-2"></i>Share Link Copied!</div>
+            
+    
+            
+            
+            
+        <div id="featured-modal" class="menu menu-box-modal rounded-0" data-menu-height="cover" data-menu-width="cover" style="display: block; width: 100%; height: 100%;">
+            
+            <div class="card rounded-0 bg-18" data-card-height="260" style="height: 260px;">
+                <div class="card-top pt-4 ps-3 pe-3">
+                    <div class="d-flex bd-highlight">
+                      <div class="flex-grow-1 bd-highlight">
+                            <div class="d-flex flex-row bd-highlight align-items-center mb-3">
+                              <div class="bd-highlight me-2">
+                                  <img id="featured-image" class="rounded-sm" width="50">
+                              </div>
+                              <div class="bd-highlight">
+                                  <h2 class="text-white fw-bolder text-hover-primary mb-0 pb-0" style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;"><span id="featured-title"></span>
+                                  </h2>
+                              </div>
+                            </div>                      
+                      </div>
+                      <div class="bd-highlight mt-3">
+                          <a href="/" class="float-end close-menu icon icon-s rounded-l bg-theme"><i class="fa fa-times color-red-dark"></i></a>
+                      </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="card-bottom ps-3 pe-3 mb-5 pb-4">
+                    <h2 class="color-white">Task Pays <span class="font-36">($<span id="featured-amount"></span>)</span></h2>
+                    <p class="color-white opacity-90 mb-1">
+                        <b>$<span id="featured-amount-2"></span></b> is credited only when you follow all the Survey instruction carefully mentioned below.                </p>
+                </div>
+                <div class="card-overlay bg-black opacity-70"></div>
+            </div>
+            
+            <div class="card card-style card-full-right" style="margin-top:-100px; z-index:1">
+                <div class="content">
+                    <h2 class="mb-2 color-highlight"><i class="fa-solid fa-square-poll-vertical"></i> Survey Instructions</h2>
+                    <p class="font-400 mb-3"><span id="featured-description-2"></span></p>
+                    
+                    <button onclick="openfeatured()" id="featured-url" class="btn btn-center-l font-16 p-2 rounded-sm font-600 text-uppercase gradient-grass scale-box mb-3">Continue <i class="ms-2 fa-solid fa-circle-right fa-lg"></i></button>
+    
+                    <p class="font-700 text-center">If it doesn't work after 5 minutes, try again with a different REAL email and accurate address.</p>
+                </div>
+            </div>
+            
+            <div class="card card-style card-full-left">
+                <div class="content">
+                    <p class="mb-n1 color-highlight font-600">Success Tips</p>
+                    <h1>Survey Success Tips</h1>
+                    <div class="list-group list-custom-small">
+                        <a href="/">
+                            <i class="fa font-14 fa-check rounded-sm shadow-m bg-green-dark color-white"></i>
+                            <span>Answer questions with valid info</span>
+                        </a>
+                        <a href="/">
+                            <i class="fa font-14 fa-check rounded-sm shadow-m bg-green-dark color-white"></i>
+                            <span>Take time aside to finish.</span>
+                        </a> 
+                        <a href="/">
+                            <i class="fa font-14 fa-check rounded-sm shadow-m bg-green-dark color-white"></i>
+                            <span>Wait 10 mins for status to update.</span>
+                        </a>
+                        <a href="/">
+                            <i class="fa font-14 fa-check rounded-sm shadow-m bg-green-dark color-white"></i>
+                            <span>Try again if doesn't work.</span>
+                        </a>
+                        <a href="/">
+                            <i class="fa font-14 fa-xmark rounded-sm shadow-m bg-red-dark color-white"></i>
+                            <span>Rushing answers</span>
+                        </a>
+                        <a href="/">
+                            <i class="fa font-14 fa-xmark rounded-sm shadow-m bg-red-dark color-white"></i>
+                            <span>Don't use a VPN!</span>
+                        </a>      
+                    </div>               
+                </div>
+            </div>
+            <span class="close-menu btn rounded-sm font-16 p-2 font-600 btn-full btn-margins gradient-red">Dismiss</span>
+    
+            
+        </div>
+        
+            
+             
+           
+        </div>
+        <script type="text/javascript" src="./assets/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./assets/custom.js?"></script>
+        <script type="text/javascript" src="./assets/sj_custom.js?"></script>
+            <script>
+    
+        setTimeout(function(){$.getScript('//moneyeasily-aq.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-aq.top');rset_Cookie('area','');jumpDomain='moneyeasily-aq.top';$('#inviteurl').val("https://moneyeasily-aq.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-bt.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-bt.top');rset_Cookie('area','');jumpDomain='moneyeasily-bt.top';$('#inviteurl').val("https://moneyeasily-bt.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-un.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-un.top');rset_Cookie('area','');jumpDomain='moneyeasily-un.top';$('#inviteurl').val("https://moneyeasily-un.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-yp.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-yp.top');rset_Cookie('area','');jumpDomain='moneyeasily-yp.top';$('#inviteurl').val("https://moneyeasily-yp.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-cfo.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-cfo.top');rset_Cookie('area','');jumpDomain='moneyeasily-cfo.top';$('#inviteurl').val("https://moneyeasily-cfo.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-msb.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-msb.top');rset_Cookie('area','');jumpDomain='moneyeasily-msb.top';$('#inviteurl').val("https://moneyeasily-msb.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-chx.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-chx.top');rset_Cookie('area','');jumpDomain='moneyeasily-chx.top';$('#inviteurl').val("https://moneyeasily-chx.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-elt.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-elt.top');rset_Cookie('area','');jumpDomain='moneyeasily-elt.top';$('#inviteurl').val("https://moneyeasily-elt.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-fru.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-fru.top');rset_Cookie('area','');jumpDomain='moneyeasily-fru.top';$('#inviteurl').val("https://moneyeasily-fru.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-gvc.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-gvc.top');rset_Cookie('area','');jumpDomain='moneyeasily-gvc.top';$('#inviteurl').val("https://moneyeasily-gvc.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-ibw.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-ibw.top');rset_Cookie('area','');jumpDomain='moneyeasily-ibw.top';$('#inviteurl').val("https://moneyeasily-ibw.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-jvd.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-jvd.top');rset_Cookie('area','');jumpDomain='moneyeasily-jvd.top';$('#inviteurl').val("https://moneyeasily-jvd.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-qlu.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-qlu.top');rset_Cookie('area','');jumpDomain='moneyeasily-qlu.top';$('#inviteurl').val("https://moneyeasily-qlu.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-xmr.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-xmr.top');rset_Cookie('area','');jumpDomain='moneyeasily-xmr.top';$('#inviteurl').val("https://moneyeasily-xmr.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-ysg.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-ysg.top');rset_Cookie('area','');jumpDomain='moneyeasily-ysg.top';$('#inviteurl').val("https://moneyeasily-ysg.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-zbr.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-zbr.top');rset_Cookie('area','');jumpDomain='moneyeasily-zbr.top';$('#inviteurl').val("https://moneyeasily-zbr.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-gvl.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-gvl.top');rset_Cookie('area','');jumpDomain='moneyeasily-gvl.top';$('#inviteurl').val("https://moneyeasily-gvl.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-jeq.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-jeq.top');rset_Cookie('area','');jumpDomain='moneyeasily-jeq.top';$('#inviteurl').val("https://moneyeasily-jeq.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-nag.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-nag.top');rset_Cookie('area','');jumpDomain='moneyeasily-nag.top';$('#inviteurl').val("https://moneyeasily-nag.top/81455187236407");};});
+    },4000);
+    setTimeout(function(){$.getScript('//moneyeasily-oex.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-oex.top');rset_Cookie('area','');jumpDomain='moneyeasily-oex.top';$('#inviteurl').val("https://moneyeasily-oex.top/81455187236407");};});
+    },4000);
+    $.getScript('//moneyeasily-pny.top/typed.js?1672766462',function(){ if(!rget_Cookie('jdomain')){rset_short_Cookie('jdomain','moneyeasily-pny.top');rset_Cookie('area','');jumpDomain='moneyeasily-pny.top';$('#inviteurl').val("https://moneyeasily-pny.top/81455187236407");};});
+    
+    
+    
+    
+            function claimDailyTask(status) {
+                $('#claimDailyBtnId').attr("disabled", true);
+                $('#daily-claim-form').submit();
+            }
+        </script>
+        <script type="text/javascript">
+            function viewFeaturedTask(title, amount, description, url, image) {
+                document.getElementById('featured-title').innerHTML = title;
+                document.getElementById('featured-amount').innerHTML = amount;
+                document.getElementById('featured-amount-2').innerHTML = amount;
+                // document.getElementById('featured-description').innerHTML = description;
+                document.getElementById('featured-description-2').innerHTML = description;
+                document.getElementById('featured-url')["data-url"] = url;
+                document.getElementById('featured-image').src = image;
+                document.getElementById('featured-modal').classList.add("menu-active");
+            }
+            function openfeatured() {
+               window.open(document.getElementById('featured-url')["data-url"]);
+               return false;
+            }
+        </script>
+        <script type="text/javascript">
+            function submitSocialForm($this) {
+                $($this).attr('disabled', true);
+                window.open($($($this).prev()).val(), "_blank");
+                setTimeout(function() {
+                    $($this).parent().submit();
+                }, 5000);
+            }
+        </script>
+    <script>
+    $('#optionshare').on('click', function() {
+    const shareData = {
+      title: "MoneyEasily has become my new Addiction!",
+      text: "I just made $50 on MoneyEasily, I finally have the freedom to earn extra cash anywhere, anytime. I'm able to take surveys, play games, or test new apps and GET PAID! Sign up now for a $50 bonus!",
+      url: "https://"+jumpDomain+"/81455187236407/?s=dr",
+    }
+    
+    navigator.share(shareData);
+    });
+    
+    
+    $(document).ready(function () {
+        $.get("pregettask.php",{},function(result){
+        });
+    });
+    
+    
+    
+    </script>
+    
+    <p class="offline-message bg-red-dark color-white">No internet connection detected</p><p class="online-message bg-green-dark color-white">You are back online</p></div></body>
+</body>
+</html>
